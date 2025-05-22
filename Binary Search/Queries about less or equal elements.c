@@ -5,15 +5,8 @@ using namespace std;
 #define optimize() ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 #define ll long long
 #define endl '\n'
-#define pb push_back
-#define vi vector<int>
-#define vii vector<long long>
-#define yes cout << "YES" << endl
-#define no cout << "NO" << endl
-#define gcd __gcd
-#define MOD 1000000007
 
-ll isOk(ll mid, ll x , const vector<ll> &v)
+long long isOk(long long mid, long long x , const vector<long long> &v)
 {
     if (v[mid] <= x) return 0;
     else return 1;
@@ -21,10 +14,10 @@ ll isOk(ll mid, ll x , const vector<ll> &v)
 
 void solve()
 {
-    ll n, m;
+    long long n, m;
     cin >> n >> m;
 
-    vector<ll> v(n);
+    vector<long long> v(n);
     for(int i = 0; i < n; ++i){
         cin >> v[i];
     }
@@ -32,12 +25,12 @@ void solve()
     sort(v.begin(), v.end());
 
     while(m--){
-        ll x;
+        long long x;
         cin >> x;
 
-        ll l = 0, r = n;
+        long long l = 0, r = n;
         while(l < r){
-            ll mid = (l + r) / 2;
+            long long mid = (l + r) / 2;
 
             if(isOk(mid, x, v) == 0)
                 l = mid + 1;
