@@ -3,23 +3,11 @@
 using namespace std;
 
 #define optimize() ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
-#define ssort(s) sort(s.begin(), s.end())
-#define vsort(v) sort(v.begin(), v.end())
-#define sunique(s) s.erase(unique(s.begin(), s.end()), s.end())
-#define vunique(v) v.erase(unique(v.begin(), v.end()), v.end())
-#define ll long long
 #define endl '\n'
-#define pb push_back
-#define vi vector<int>
-#define vii vector<long long>
-#define yes cout << "YES" << endl
-#define no cout << "NO" << endl
-#define gcd __gcd
-#define MOD 1000000007
 
-ll power(ll base , ll p)
+long long power(long long base , long long p)
 {
-    ll ans = 1;
+    long long ans = 1;
     base = base % MOD;
     while(p) {
         if(p % 2 == 1) {
@@ -32,7 +20,7 @@ ll power(ll base , ll p)
 }
 
 void solve() {
-    ll n , k;
+    long long n , k;
     cin >> n >> k;
 
     cout << power(n , k) << endl;
