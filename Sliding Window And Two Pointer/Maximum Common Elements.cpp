@@ -5,20 +5,15 @@ using namespace std;
 #define optimize() ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 #define ll long long
 #define endl '\n'
-#define pb push_back
-#define vi vector<int>
-#define vii vector<long long>
 #define yes cout << "YES" << endl
 #define no cout << "NO" << endl
-#define gcd __gcd
-#define MOD 1000000007
 
 void solve()
 {
     int n;
     cin >> n;
 
-    vi a(n) , b(n);
+    vector<int> a(n) , b(n);
 
     for(int i = 0; i < n; ++i){
         cin >> a[i];
