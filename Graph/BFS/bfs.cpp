@@ -6,7 +6,7 @@ using namespace std;
 #define pb push_back
 #define vi vector<int>
 
-const int mx = 1e5 + 123; // Maximum number of nodes
+const int mx = 5e5 + 123; // Maximum number of nodes
 vi adj[mx]; // Adjacency list to store the graph
 int lev[mx]; // Level array to store distance from source
 
@@ -48,3 +48,4 @@ int main()
 
     cout << lev[n] << endl; // Print the level (shortest distance) of node n from node 1
 }
+
