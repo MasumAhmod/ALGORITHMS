@@ -5,7 +5,7 @@ using namespace std;
 #define pb push_back
 #define vi vector<int>
 
-const int mx = 1e5 + 123;
+const int mx = 5e5 + 123;
 vi adj[mx];
 bool vis[mx];
 
@@ -40,3 +40,4 @@ int main()
     }
     cout << cnt << endl;
 }
+
