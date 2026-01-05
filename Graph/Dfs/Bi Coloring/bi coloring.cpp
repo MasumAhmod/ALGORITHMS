@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define N 200005
+#define N 500005
 vector <int> adj[N];
 int n , m;
 int visited[N];
@@ -56,3 +56,4 @@ int main() {
 
     return 0;
 }
+
