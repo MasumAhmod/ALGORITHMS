@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define N 100005
+#define N 500005
 
 int n , m;
 vector <int> adj[N];
@@ -49,4 +49,5 @@ int main() {
 
     return 0;
 }
+
 
