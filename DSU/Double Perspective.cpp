@@ -14,58 +14,21 @@ using namespace std;
 #define vall v.begin(),v.end()
 #define MOD 1000000007
 
-const int mx = 6e3 + 123;
-int par[mx];
-int n;
-
-void init() {
-    for(int i = 1; i <= 2 * n; ++i) {
-        par[i] = i;
-    }
-}
-
-int find(int i) {
-    if(par[i] == i) {
-        return i;
-    }
-
-    return par[i] = find(par[i]);
-}
-
-bool dsu_join(int a, int b) {
-    int pa = find(a);
-    int pb = find(b);
-
-    if(pa == pb) {
-        return false;
-    }
-
-    par[pb] = pa;
-    return true;
-}
+const int mx = 2e5 + 123;
+vector <int> g[mx];
 
 void solve()
 {
+    int n;
     cin >> n;
 
-    init();
-
-    vector <int> ans;
-
+    vector <int> v(n + 1);
     for(int i = 1; i <= n; ++i) {
-        int a , b;
-        cin >>a >> b;
+        int u;
+        cin >> u;
 
-        if(dsu_join(a , b)) {
-            ans.push_back(i);
-        }
+        g[i].push_back(u);
     }
-
-    cout << ans.size() << endl;
-    for(auto &u : ans) {
-        cout << u << " ";
-    } cout << endl;
-
 }
 
 int32_t main()
