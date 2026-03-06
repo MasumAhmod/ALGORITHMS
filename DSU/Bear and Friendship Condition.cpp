@@ -70,13 +70,13 @@ void solve()
             int e = edges[i];
 
             if(e != v*(v-1)/2) {
-                cout << NO << endl;
+                cout << "NO" << endl;
                 return;
             }
         }
     }
 
-    cout << YES << endl;
+    cout << "YES" << endl;
 }
 
 int32_t main()
