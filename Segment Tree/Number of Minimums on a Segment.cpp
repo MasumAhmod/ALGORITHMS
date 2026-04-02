@@ -108,7 +108,7 @@ void solve() {
  
             pair <int ,int> ans = query(1 , 1 , n , i + 1 , j);
  
-            cout << ans.first <<   << ans.second << endl;
+            cout << ans.first << " " << ans.second << endl;
         }
     }
 }
