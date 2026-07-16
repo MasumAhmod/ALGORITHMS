@@ -1,0 +1,66 @@
+///MAsum
+#include <bits/stdc++.h>
+using namespace std;
+
+#define Start ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define int long long
+#define endl '\n'
+#define pb push_back
+#define vi vector<int>
+#define vii vector<long long>
+#define yes cout << "YES" << endl
+#define no cout << "NO" << endl
+#define gcd __gcd
+#define vall v.begin(),v.end()
+#define MOD 676767677
+#define inf 1e10
+
+void solve() {
+    int n , k;
+    cin >> n >> k;
+
+    vector <int> v(n);
+    for(int i = 0; i < n; ++i) {
+        cin >> v[i];
+    }
+
+    sort(v.begin() , v.end());
+    int l = 0 , r = n - 1;
+    int cnt = 0;
+
+    int ans = 0;
+    while(l <= r) {
+        if(v[l] >= k) {
+            ans += v[l];
+            l++;
+            cnt++;
+        } else {
+            ans += (max(v[l] , v[r]));
+            l++;
+            r--;
+            cnt++;
+        }
+    }
+
+    // cout << ans << endl;
+
+    k *= cnt;
+    cout << (ans - k) << endl;
+} 
+
+int32_t main()
+{
+    Start
+
+    int t = 0;
+    cin >> t;
+
+    // solve();
+
+    while (t--)
+    {
+        solve();
+    }
+
+    return 0;
+}
