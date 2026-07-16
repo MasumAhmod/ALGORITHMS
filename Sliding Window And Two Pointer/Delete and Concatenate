@@ -42,8 +42,6 @@ void solve() {
         }
     }
 
-    // cout << ans << endl;
-
     k *= cnt;
     cout << (ans - k) << endl;
 } 
